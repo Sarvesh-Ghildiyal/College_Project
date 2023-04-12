@@ -14,5 +14,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $title='Login';
+    return view('login',compact('title'));
+});
+
+
+Route::post('/complain_form', function () {
+    $title='Complain Form';
+    return view('complain_form',compact('title'));
+});
+
+Route::get('/complain_status', function () {
+    $title='Complain Status';
+    return view('complain_status',compact('title'));
+});
+
+Route::get('/complain_remark', function () {
+    $title='Complain Remarks';
+    return view('remark',compact('title'));
+});
+
+
+Route::get('/dashboard', function () {
+    $title='Dashboard';
+    return view('dashboard',compact('title'));
 });
