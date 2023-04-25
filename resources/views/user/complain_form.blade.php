@@ -1,4 +1,5 @@
-@extends('welcome')
+@extends('user.welcome')
+
 
 @section('content')
  <!-- Login Form -->

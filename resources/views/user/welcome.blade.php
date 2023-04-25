@@ -15,7 +15,7 @@
     <div class="container">
 
     {{ View::make('header')}}
-    {{View::make('navbar')}}
+    {{View::make('user.navbar')}}
    
     @yield('content')
     

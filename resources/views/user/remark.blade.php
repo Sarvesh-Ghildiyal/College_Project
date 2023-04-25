@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('user.welcome')
 @section('content')
 <!-- Complain Status Form -->
 <div class="main_body row">
