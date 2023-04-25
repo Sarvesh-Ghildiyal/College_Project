@@ -1,3 +1,4 @@
+@extends('user.usercheck')
 @extends('user.welcome')
 
 
@@ -9,7 +10,7 @@
     <h3 class="col-12">Complain Form</h3>
     
     <!-- Proper form -->
-    <form class="col-12">
+    <form class="col-12" method="Post">
 
         @csrf
        <div class="row complain_form">

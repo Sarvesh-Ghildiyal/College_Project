@@ -1,3 +1,4 @@
+@extends('user.usercheck')
 @extends('user.welcome')
 @section('content')
 <!-- Complain Status Form -->

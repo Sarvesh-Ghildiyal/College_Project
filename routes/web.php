@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\ComplainController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,32 +26,7 @@ use Illuminate\Support\Facades\Route;
 //     // return $tasks;
 // });
 
-Route::post("/complain_form",[TeacherController::class,'login']);
 
-
-
-Route::get('/complain_form', function () {
-    $title='Complain Form';
-    return view('complain_form',compact('title'));
-});
-
-
-Route::get('/complain_status', function () {
-    $title='Complain Status';
-    return view('complain_status',compact('title'));
-});
-
-
-Route::get('/complain_remark', function () {
-    $title='Complain Remarks';
-    return view('remark',compact('title'));
-});
-
-
-Route::get('/dashboard', function () {
-    $title='Dashboard';
-    return view('dashboard',compact('title'));
-});
 
 //---------------------------------------------------------------------------
 //  user side
@@ -64,3 +41,9 @@ Route::get('/user/complain_form', [UserController::class, 'complain_form']);
 Route::get('/user/remark',[UserController::class,'remark']);
 
 Route::get('/logout',[UserController::class,'logout']);
+
+
+
+// Filling Complains
+
+Route::post('/user/complain_form',[ComplainController::class,'register']);
