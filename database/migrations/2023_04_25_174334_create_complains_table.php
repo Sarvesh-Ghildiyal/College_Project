@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('complain', function (Blueprint $table) {
+        Schema::create('complains', function (Blueprint $table) {
+          
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('department');
             $table->unsignedBigInteger('room_no');
             $table->string('reported_by');
             $table->string('problem');
+
             $table->string('comp_obs');
             $table->string('user_remarks');
             $table->string('comp_about');
